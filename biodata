@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const BiodataApp());
+}
+
+class BiodataApp extends StatelessWidget {
+  const BiodataApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Biodata App',
+      debugShowCheckedModeBanner: false,
+      home: const BiodataScreen(),
+    );
+  }
+}
+
+class BiodataScreen extends StatelessWidget {
+  const BiodataScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.lightBlueAccent, // Warna latar belakang berbeda
+      body: Center(
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            color: Colors.white, // Container warna berbeda
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 6,
+                offset: Offset(0, 4),
+                color: Colors.black26,
+              ),
+            ],
+          ),
+          child: const Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Nama       : Ahmad azqi yauci',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'Tempat Lahir : Tiaro',
+                style: TextStyle(fontSize: 16),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'Tanggal Lahir: 16 04 2006',
+                style: TextStyle(fontSize: 16),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'Prodi       : sistem informasi',
+                style: TextStyle(fontSize: 16),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'Moto        : syukuri dan jalani apa yang terjadi, baik dan buruk nya takdir itu semua bagian dari perjanjian yang telah di sepakati antara seorang hamba dan mahluk nya',
+                style: TextStyle(fontSize: 16),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
